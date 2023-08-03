@@ -2,7 +2,7 @@ const form = document.getElementById("form-validacao");
 
 
 function validacao(valorA, valorB) {
-    return parseInt(valorB) > parseInt(valorA)
+    return parseFloat(valorB) > parseFloat(valorA)
 }
 
 form.addEventListener("submit", function (e) {
