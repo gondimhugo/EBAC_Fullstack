@@ -2,7 +2,7 @@ const form = document.getElementById("form-validacao");
 
 
 function validacao(valorA, valorB) {
-    return valorB > valorA
+    return parseInt(valorB) > parseInt(valorA)
 }
 
 form.addEventListener("submit", function (e) {
@@ -13,7 +13,7 @@ form.addEventListener("submit", function (e) {
 
     const mensagemSucesso = `Validado! o valor A: <b>${minValue}</b> é menor que o valor B: <b>${maxValue}</b> `
     const mensagemSame = `<b>Deu ruim!</b> :( Os valores são indênticos, não é válido!`
-    const mensagemError = `<b>Vacilo!</b> :( O valor de B é maior que A, não é válido!`
+    const mensagemError = `<b>Vacilo!</b> :( O valor de B é menor que A, não é válido!`
     formEValido = validacao(minValue, maxValue)
 
     if (formEValido) {
